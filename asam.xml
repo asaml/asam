@@ -1,1 +1,37 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="movement_left" id="209" x="16" y="17">
+    <next>
+      <block type="movement_reverse" id="199">
+        <next>
+          <block type="movement_setmotors" id="11" inline="true">
+            <value name="BOTHMOVLEFT">
+              <block type="sensor_button" id="125">
+                <field name="OBJECT">LEFT</field>
+              </block>
+            </value>
+            <value name="BOTHMOVRIGHT">
+              <block type="sensor_button" id="153">
+                <field name="OBJECT">RIGHT</field>
+              </block>
+            </value>
+            <next>
+              <block type="led_select" id="117" inline="true">
+                <field name="ACTION">FLASH</field>
+                <value name="LED">
+                  <block type="sensor_object" id="182">
+                    <field name="OBJECT">REAR</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="multimedia_displaybmp" id="242">
+                    <field name="BMP">103</field>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
